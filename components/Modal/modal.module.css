@@ -19,7 +19,7 @@
   position: absolute;
   z-index: 999;
   left: 50%;
-  top: 40%;
+  top: 46%;
   transform: translate(-50%, -50%);
   background-color: #fefefe;
   border-radius: 0.5rem;
@@ -36,22 +36,22 @@
 /* Add Animation */
 @-webkit-keyframes animatetop {
   from {
-    top: -200px;
+    top: -100px;
     opacity: 0;
   }
   to {
-    top: 40%;
+    top: 46%;
     opacity: 1;
   }
 }
 
 @keyframes animatetop {
   from {
-    top: -200px;
+    top: -100px;
     opacity: 0;
   }
   to {
-    top: 40%;
+    top: 46%;
     opacity: 1;
   }
 }
