@@ -1,4 +1,6 @@
 import React from "react";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 import {
   FaFacebook,
   FaInstagram,
@@ -6,14 +8,23 @@ import {
   FaWhatsapp,
   FaWindowClose,
 } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 import Modal from "../../Modal";
-import styles from "./connectusmodal.module.css";
 import Button from "../../UI/Button";
+import CircularLoader from "../../Loaders/CircularLoader";
+
+//toast css
+import "react-toastify/dist/ReactToastify.css";
 
 type ModalProps = {
   open: Boolean;
   setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+type FormValues = {
+  name: string;
+  phoneEmail: string;
 };
 
 const sx = {
@@ -23,13 +34,83 @@ const sx = {
 };
 
 const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
+  const {
+    register,
+    handleSubmit,
+    control,
+    reset,
+    formState: { errors },
+  } = useForm<FormValues>();
+
   const [openDestDropdown, setOpenDestDropdown] =
-    React.useState<Boolean>(false);
+    React.useState<boolean>(false);
 
   const [dropdownValue, setDropdownValue] = React.useState<string>("Select");
+  const [loading, setLoading] = React.useState<boolean>(false);
 
-  const onClickHandler = () => {
-    setOpenModal(false);
+  const onSubmit: SubmitHandler<FormValues> = (data) => {
+    setLoading(true);
+    const templateParams = {
+      ...data,
+      destination: dropdownValue,
+    };
+
+    try {
+      emailjs
+        .send(
+          "service_xwtolqy",
+          "template_gf3hzip",
+          templateParams,
+          "F9KwgK-VvF1rk4y2O"
+        )
+        .then(
+          (response) => {
+            if (response.status === 200) {
+              reset();
+              setLoading(false);
+              toast("Details Submitted Successfully", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                type: "success",
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+              });
+              setOpenModal(false);
+            }
+          },
+          (err) => {
+            toast("Something Went Wrong. Please Try again", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              type: "error",
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
+            setLoading(false);
+          }
+        );
+    } catch (err) {
+      toast("Something Went Wrong. Please Try again", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        type: "error",
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      setLoading(false);
+    }
   };
 
   return (
@@ -61,19 +142,19 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
           <div className="flex">
             <a
               href="#"
-              className="p-2 mr-2 bg-sky-600 text-white hover:opacity-60 rounded-md"
+              className="p-2 mr-2 bg-sky-700 text-white hover:opacity-60 rounded-md"
             >
               <FaInstagram />
             </a>
             <a
               href="#"
-              className="p-2 mr-2 bg-sky-600 text-white hover:opacity-60 rounded-md"
+              className="p-2 mr-2 bg-sky-700 text-white hover:opacity-60 rounded-md"
             >
               <FaFacebook />
             </a>
             <a
               href="#"
-              className="p-2 bg-sky-600 text-white hover:opacity-60 rounded-md"
+              className="p-2 bg-sky-700 text-white hover:opacity-60 rounded-md"
             >
               <FaLinkedin />
             </a>
@@ -81,23 +162,26 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
         </div>
         <hr className="my-4 h-px bg-gray-200 border-0 dark:bg-gray-700" />
         <div className="flex justify-center">
-          <form className="w-full">
+          <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-wrap -mx-3 mb:1 md:mb-5">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-4">
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                   htmlFor="grid-first-name"
                 >
-                  Name
+                  Name*
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-2 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
-                  id="grid-first-name"
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-2 px-4 mb-2 leading-tight focus:outline-none focus:bg-white capitalize"
+                  id="grid-first-"
+                  {...register("name", {
+                    required: "Name is required",
+                  })}
                   type="text"
                   placeholder="Enter your name"
                 />
                 <p className="text-red-500 text-xs italic">
-                  Please fill out this field.
+                  {errors.name && errors.name.message}
                 </p>
               </div>
               <div className="relative w-full md:w-1/2 px-3 mb-6 md:mb-4 inline-block text-left">
@@ -122,9 +206,9 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
                       aria-hidden="true"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       />
                     </svg>
                   </button>
@@ -163,7 +247,7 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
                         tabIndex={-1}
                         id="menu-item-1"
                       >
-                        Australia
+                        Ireland
                       </a>
                       <a
                         onClick={() => {
@@ -187,26 +271,40 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                   htmlFor="grid-city"
                 >
-                  Phone Number/Email
+                  Phone Number/Email*
                 </label>
-                <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 mb-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-city"
-                  type="text"
-                  placeholder="Albuquerque"
+                <Controller
+                  render={({ field }) => (
+                    <input
+                      {...field}
+                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 mb-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="grid-city"
+                      type="text"
+                      placeholder="Enter Phone No or Email"
+                    />
+                  )}
+                  name="phoneEmail"
+                  control={control}
+                  rules={{ required: "This is a required field" }}
+                  defaultValue=""
                 />
+
                 <p className="text-red-500 text-xs italic">
-                  Please fill out this field.
+                  {errors.phoneEmail && errors.phoneEmail?.message}
                 </p>
               </div>
               {/* dropdown */}
             </div>
-            <Button
-              variant="bg-indigo-600 rounded-md text-white hover:bg-indigo-700 px-8 py-2"
-              onClick={onClickHandler}
-            >
-              Submit
-            </Button>
+            <div className="flex">
+              <Button variant="bg-indigo-600 rounded-md text-white hover:bg-indigo-700 px-8 py-2">
+                Submit
+              </Button>
+              {loading && (
+                <div className="ml-2 mt-1">
+                  <CircularLoader />
+                </div>
+              )}
+            </div>
           </form>
         </div>
       </div>

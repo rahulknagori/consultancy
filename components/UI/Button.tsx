@@ -1,7 +1,7 @@
 interface Props {
   variant: string;
   children?: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const Button: React.FC<Props> = ({ children, onClick, variant }) => {

@@ -4,6 +4,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { Navigation, Pagination, A11y, Autoplay, Scrollbar } from "swiper";
+import { toast, ToastContainer } from "react-toastify";
+
 import {
   FaFacebook,
   FaInstagram,
@@ -37,6 +39,7 @@ const Home: NextPage = () => {
         </Head>
         <div className="relative overflow-hidden bg-white">
           <div className="mx-auto max-w-7xl">
+            <ToastContainer />
             <div className="relative z-10 bg-white pb-8 sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32">
               <svg
                 className="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block"
@@ -57,7 +60,7 @@ const Home: NextPage = () => {
                     <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
                       <div className="flex w-full items-center justify-between md:w-auto">
                         <a href="#">
-                          <span className="sr-only">Your Company</span>
+                          <span className="sr-only">FlyBrod</span>
                           <Image
                             width={64}
                             height={45}
@@ -98,7 +101,7 @@ const Home: NextPage = () => {
                         href="#"
                         className="font-medium text-gray-500 hover:text-gray-900"
                       >
-                        XYZ WSHJH
+                        FlyBrod
                       </a>
 
                       {/* <a
@@ -290,9 +293,9 @@ const Home: NextPage = () => {
                 Get help with SOPS, IELTS, and Interviews
               </h2>
               <p className="text-base relative z-4 text-gray mt-2">
-                Our team will help you prepare SOPs. We will also help you
-                prepare for interviews and and ensure all necessary preparations
-                are made to make sure that your admission is smooth.
+                Our team will help you prepare a strong statement of purpose,
+                ace faculty interviews, and provide advice for IELTS exams. We
+                will also help you build a strong CV.
               </p>
             </div>
             <div className="relative z-4">
@@ -306,10 +309,10 @@ const Home: NextPage = () => {
                 Visa and payment
               </h2>
               <p className="text-base relative z-4 text-gray mt-2">
-                We are here to help you with the visa process and also help you
-                find a accommodation, if needed. You do not pay any fees to us
-                during these steps. You will be paying the fees directly to the
-                university.
+                We are here to help you with the visa process, including mock
+                interviews and also help you find a accommodation, if needed.
+                All our services are completely free! You will be paying the
+                fees directly to the university.
               </p>
             </div>
           </div>
@@ -352,9 +355,7 @@ const Home: NextPage = () => {
                 alt="destinations - study in the Australia"
                 src="/home/study-in-australia.png"
               ></Image>
-              <h3 className="text-center font-bold mt-3 ">
-                Study in Australia
-              </h3>
+              <h3 className="text-center font-bold mt-3 ">Study in Ireland</h3>
             </div>
           </div>
         </div>
@@ -383,10 +384,11 @@ const Home: NextPage = () => {
                   </h5>
                 </div>
                 <p className="tracking-tight ml-9 mt-1 ">
-                  We offer 100% free service during the entire application
-                  processs. This ensures that you have a great experience and
-                  afford the best tuition prices for your chosen university. You
-                  will only have to pay directly to the university.
+                  All our services are completely free of charge, with no
+                  strings attached. This ensures that you have a great
+                  experience and can afford the best tuition prices for your
+                  chosen university. You will only have to pay directly to the
+                  university.
                 </p>
               </div>
               <div className="max-w-md mt-5">
@@ -410,8 +412,8 @@ const Home: NextPage = () => {
                   </h5>
                 </div>
                 <p className="tracking-tight  ml-9 mt-1">
-                  We offer one-stop online solution for all your visa process so
-                  that you can plan ahead your future education abroad.
+                  We offer one-stop online solution for all your visa process
+                  and ensure the entire process is short, swift and smooth.
                 </p>
               </div>
               <div className="max-w-md mt-5">
@@ -442,7 +444,7 @@ const Home: NextPage = () => {
           </h2>
           <p className="sm:px-14 max-w-4xl m-auto md:px-28 text-base text-center relative z-4 text-gray mt-4">
             Our consultants have partnered with some of the top universities in
-            the world to provide the best learning experience for our students..
+            the world to provide the best learning experience for our students.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-7 pb-5">
             <div className=" flex flex-col items-center">
@@ -453,7 +455,9 @@ const Home: NextPage = () => {
                 alt="UWS Scotland"
                 src="/home/uws-scotland.jpeg"
               ></Image>
-              <h3 className="text-center font-bold mt-3 ">UWS</h3>
+              <h3 className="text-center font-bold mt-3 ">
+                University of the West of Scotland
+              </h3>
             </div>
             <div className=" flex flex-col items-center">
               <Image
@@ -463,7 +467,9 @@ const Home: NextPage = () => {
                 alt="York st john"
                 src="/home/york-st-john.jpeg"
               ></Image>
-              <h3 className="text-center font-bold mt-3 ">York St John</h3>
+              <h3 className="text-center font-bold mt-3 ">
+                York St John University
+              </h3>
             </div>
             <div className="flex flex-col items-center">
               <Image
@@ -485,7 +491,7 @@ const Home: NextPage = () => {
         </h2>
         <p className="sm:px-14 md:px-28 max-w-4xl m-auto text-base text-center relative z-4 text-gray mt-4">
           Our students have recently been accepted to universities in Canada,
-          the UK and Australia. What are you waiting for?
+          the UK and Ireland. What are you waiting for?
         </p>
         <div className="flex justify-between mt-10">
           <Swiper
@@ -535,7 +541,7 @@ const Home: NextPage = () => {
                             </p>
                           </div>
                         </div>
-                        <p className="text-gray-700 text-base mt-2 max-h-28 overflow-auto">
+                        <p className="text-gray-700 text-base mt-2 max-h-32 overflow-auto">
                           One of my friend recommended these guys when i was
                           thinking of studying in the uk. I was assigned to
                           Dheeraj. I was very late to apply and deadline was
@@ -568,10 +574,9 @@ const Home: NextPage = () => {
             <div className="max-w-xs w-full md:w-2/4">
               <p className="font-bold">Firm Name</p>
               <p className="text-sm mt-2">
-                If you live in India, we can put our knowledge and experience to
-                work for you from the very start of your study abroad journey –
-                from finding a reputable institution abroad to helping with visa
-                applications.
+                We can put our knowledge and experience to work for you from the
+                very start of your study abroad journey – from finding a
+                reputable institution abroad to helping with visa applications.
               </p>
             </div>
             <ul className="w-full md:w-2/4 flex mt-2 md:mt-0 md:items-end flex-col">
