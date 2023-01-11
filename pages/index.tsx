@@ -200,19 +200,19 @@ const Home: NextPage = () => {
 
               <main className="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                 <div className="sm:text-center lg:text-left">
-                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-5xl">
                     <span className="block xl:inline">
-                      Connect with India’s Most Trusted{" "}
+                      Achieve your Study Abroad Dreams with
                     </span>
-                    <span className="block text-indigo-600 xl:inline">
-                      Overseas Education Consultants
+                    <span className="block text-indigo-600 xl:inline ml-2">
+                      India's Top Consultants
                     </span>
                   </h1>
                   <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">
-                    Are you interested in studying abroad? Well, that’s what we
-                    are here for. We have handpicked some of India’s best
-                    education consultants so that you can fullfill your dream of
-                    studying abroad hassle free.
+                    Achieving your goal of studying abroad has never been easier
+                    with our expert help. We have carefully selected the top
+                    overseas education consultants in India to ensure a smooth
+                    and stress-free process for you.
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                     <div
@@ -247,7 +247,8 @@ const Home: NextPage = () => {
             Study abroad in 4 simple steps
           </h2>
           <p className="text-center mt-3 italic">
-            We don't charge any fees during any of these steps
+            Our team will guide you through every step of the study abroad
+            process, from consultation to visa, at no cost.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
             <div className="relative z-4">
@@ -258,12 +259,13 @@ const Home: NextPage = () => {
                 1
               </div>
               <h2 className="text-2xl relative z-4 font-bold tracking-tight text-gray-900">
-                Tell us your requirements and preferred destination
+                Consultation
               </h2>
               <p className="text-base relative z-4 text-gray mt-2">
-                Our team of experts will get in touch with you to understand
-                your needs, shortlist universities and destinations for you, so
-                that you can make an informed decision.
+                Share your study abroad goals with us and our team will contact
+                you to understand your needs, shortlist universities and
+                destinations that match your preferences, and provide expert
+                advice on the best options for you.
               </p>
             </div>
             <div className="relative z-4">
@@ -274,12 +276,12 @@ const Home: NextPage = () => {
                 2
               </div>
               <h2 className="text-2xl relative z-4 font-bold tracking-tight text-gray-900">
-                Submitting and verifying the documents
+                Document Preparation and Verification
               </h2>
               <p className="text-base relative z-4 text-gray mt-2">
-                We will help you with the documentation process by providing you
-                with a list of documents required for the application process.
-                We will then verify all the documents you have submitted.
+                Our team will assist you in compiling a list of necessary
+                documents and verifying them to ensure they meet the
+                requirements.
               </p>
             </div>
             <div className="relative z-4">
@@ -290,12 +292,12 @@ const Home: NextPage = () => {
                 3
               </div>
               <h2 className="text-2xl relative z-4 font-bold tracking-tight text-gray-900">
-                Get help with SOPS, IELTS, and Interviews
+                Application Assistance
               </h2>
               <p className="text-base relative z-4 text-gray mt-2">
-                Our team will help you prepare a strong statement of purpose,
-                ace faculty interviews, and provide advice for IELTS exams. We
-                will also help you build a strong CV.
+                Receive help with writing a strong statement of purpose,
+                preparing for IELTS exams and faculty interviews, and building a
+                professional CV.
               </p>
             </div>
             <div className="relative z-4">
@@ -306,13 +308,13 @@ const Home: NextPage = () => {
                 4
               </div>
               <h2 className="text-2xl relative z-4 font-bold tracking-tight text-gray-900">
-                Visa and payment
+                Visa and Payment
               </h2>
               <p className="text-base relative z-4 text-gray mt-2">
-                We are here to help you with the visa process, including mock
-                interviews and also help you find a accommodation, if needed.
-                All our services are completely free! You will be paying the
-                fees directly to the university.
+                Our team will guide you through the visa application process,
+                including mock interviews and provide advice on finding suitable
+                accommodation. All our services are completely free of charge,
+                with the fees paid directly to the university.
               </p>
             </div>
           </div>
@@ -380,53 +382,55 @@ const Home: NextPage = () => {
                 <div className="flex items-center">
                   <FaMoneyCheckAlt className="text-indigo-600" size={20} />
                   <h5 className="text-gray font-bold tracking-tight ml-4">
-                    Zero Service Fees/Money
+                    Free Study Abroad Services
                   </h5>
                 </div>
                 <p className="tracking-tight ml-9 mt-1 ">
-                  All our services are completely free of charge, with no
-                  strings attached. This ensures that you have a great
-                  experience and can afford the best tuition prices for your
-                  chosen university. You will only have to pay directly to the
-                  university.
+                  We offer a range of study abroad services completely free of
+                  charge, including university selection, application support,
+                  and visa guidance, so you can focus on securing the best
+                  tuition prices for your chosen university.
                 </p>
               </div>
               <div className="max-w-md mt-5">
                 <div className="flex items-center">
                   <FaUserShield className="text-indigo-600" size={20} />
                   <h5 className="text-gray font-bold tracking-tight ml-4">
-                    Trusted Experienced Consultancies
+                    Expert Consultants
                   </h5>
                 </div>
                 <p className=" tracking-tight  ml-9 mt-1">
-                  We have handpicked some of the best consultants from India
-                  with over seven years of experience to provide you with a
-                  seamless study abroad journey.
+                  We have a team of experienced education consultants from India
+                  with over 7 years of experience in guiding students through
+                  the study abroad process, providing you with a seamless and
+                  personalized experience.
                 </p>
               </div>
               <div className="max-w-md mt-5">
                 <div className="flex items-center">
                   <FaGgCircle className="text-indigo-600" size={20} />
                   <h5 className="text-gray font-bold tracking-tight ml-4">
-                    Seamless Experience
+                    Convenient and Efficient Visa Process
                   </h5>
                 </div>
                 <p className="tracking-tight  ml-9 mt-1">
-                  We offer one-stop online solution for all your visa process
-                  and ensure the entire process is short, swift and smooth.
+                  We offer an easy-to-use online platform for all your visa
+                  needs, streamlining the process and minimizing the stress of
+                  the visa application process, resulting in a high success
+                  rate.
                 </p>
               </div>
               <div className="max-w-md mt-5">
                 <div className="flex items-center">
                   <FaCheckSquare className="text-indigo-600" size={20} />
                   <h5 className="text-gray font-bold tracking-tight ml-4">
-                    Visa Assurance - High success rate
+                    High Visa Success Rate
                   </h5>
                 </div>
                 <p className="tracking-tight ml-9 mt-1">
-                  We evaluate the student’s profile at the start of the
-                  application process and prepare them to be able to get
-                  admitted with high success rate.
+                  We conduct a thorough assessment of each student's profile to
+                  ensure they meet the requirements and have the best chance of
+                  success in the visa application process.
                 </p>
               </div>
               <button
@@ -443,8 +447,9 @@ const Home: NextPage = () => {
             Partnered with 200+ universities
           </h2>
           <p className="sm:px-14 max-w-4xl m-auto md:px-28 text-base text-center relative z-4 text-gray mt-4">
-            Our consultants have partnered with some of the top universities in
-            the world to provide the best learning experience for our students.
+            Our consultants have established partnerships with over 200
+            universities worldwide, providing students with access to a wide
+            range of top-ranked institutions and diverse academic programs.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-7 pb-5">
             <div className=" flex flex-col items-center">
