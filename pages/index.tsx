@@ -191,9 +191,9 @@ const Home: NextPage = () => {
                 Document Preparation and Verification
               </h2>
               <p className="text-base relative z-4 text-gray mt-2">
-                Our team will assist you in compiling a list of necessary
-                documents and verifying them to ensure they meet the
-                requirements.
+                We provide a comprehensive document preparation and verification
+                service to ensure that your application is complete and meets
+                all the necessary requirements for your chosen program.
               </p>
             </div>
             <div className="relative z-4">
@@ -209,7 +209,8 @@ const Home: NextPage = () => {
               <p className="text-base relative z-4 text-gray mt-2">
                 Receive help with writing a strong statement of purpose,
                 preparing for IELTS exams and faculty interviews, and building a
-                professional CV.
+                professional CV. We also offer advice on how to stand out to
+                admissions committees.
               </p>
             </div>
             <div className="relative z-4">
@@ -225,8 +226,8 @@ const Home: NextPage = () => {
               <p className="text-base relative z-4 text-gray mt-2">
                 Our team will guide you through the visa application process,
                 including mock interviews and provide advice on finding suitable
-                accommodation. All our services are completely free of charge,
-                with the fees paid directly to the university.
+                accommodation. All our services are free of charge, with the
+                fees paid directly to the university.
               </p>
             </div>
           </div>
@@ -236,7 +237,7 @@ const Home: NextPage = () => {
           <h2 className="pt-5 text-4xl text-center mt-20 font-bold tracking-tight text-gray-900 sm:text-5xl">
             Destinations
           </h2>
-          <p className="sm:px-14 md:px-28 text-base text-center relative z-4 text-gray mt-4">
+          <p className="sm:px-14 md:px-28 text-base text-center relative z-4 text-gray mt-4 italic">
             Currently, we are assisting students to pursue their dream of
             studying abroad in these countries.
           </p>
@@ -358,13 +359,13 @@ const Home: NextPage = () => {
           <h2 className="pt-5 text-4xl text-center mt-20 font-bold tracking-tight text-gray-900 sm:text-5xl">
             Partnered with 200+ universities
           </h2>
-          <p className="sm:px-14 max-w-4xl m-auto md:px-28 text-base text-center relative z-4 text-gray mt-4">
+          <p className="sm:px-14 max-w-4xl m-auto md:px-28 text-base text-center relative z-4 text-gray mt-4 ">
             Our consultants have established partnerships with over 200
             universities worldwide, providing students with access to a wide
             range of top-ranked institutions and diverse academic programs.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-7 pb-5">
-            <div className=" flex flex-col items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-7 pb-5">
+            <div className="flex flex-col items-center">
               <Image
                 width={110}
                 height={110}
@@ -398,6 +399,68 @@ const Home: NextPage = () => {
               ></Image>
               <h3 className="text-center font-bold mt-3 ">
                 University of East London
+              </h3>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image
+                width={110}
+                height={110}
+                className="m-auto rounded-full"
+                alt="University of east london"
+                src="/home/University-of-glasgow.jpeg"
+              ></Image>
+              <h3 className="text-center font-bold mt-3 ">
+                University of Glasgow
+              </h3>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-7 pb-5">
+            <div className=" flex flex-col items-center">
+              <Image
+                width={110}
+                height={110}
+                className="m-auto rounded-full"
+                alt="UWS Scotland"
+                src="/home/Regent's-university-london.jpeg"
+              ></Image>
+              <h3 className="text-center font-bold mt-3 ">
+                Regent's University London
+              </h3>
+            </div>
+            <div className=" flex flex-col items-center">
+              <Image
+                width={110}
+                height={110}
+                className="m-auto rounded-full"
+                alt="York st john"
+                src="/home/University-of-Greenwich.jpeg"
+              ></Image>
+              <h3 className="text-center font-bold mt-3 ">
+                University of Greenwich
+              </h3>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image
+                width={110}
+                height={110}
+                className="m-auto rounded-full"
+                alt="University of east london"
+                src="/home/Imperial-College-London.jpeg"
+              ></Image>
+              <h3 className="text-center font-bold mt-3 ">
+                Imperial College London
+              </h3>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image
+                width={110}
+                height={110}
+                className="m-auto rounded-full"
+                alt="University of east london"
+                src="/home/Northumbria-University-London.jpeg"
+              ></Image>
+              <h3 className="text-center font-bold mt-3 ">
+                Northumbria University London
               </h3>
             </div>
           </div>
@@ -497,8 +560,8 @@ const Home: NextPage = () => {
               </p>
             </div>
             <ul className="w-full md:w-2/4 flex mt-2 md:mt-0 md:items-end flex-col">
-              <li className="text-sm mb-2">Phone: 12345678910</li>
-              <li className="text-sm mb-2">Email: info@pqrstuvwxyz.com</li>
+              <li className="text-sm mb-2">Phone: +919945473262</li>
+              <li className="text-sm mb-2">Email: info@flybrod.com</li>
             </ul>
           </div>
         </div>
