@@ -557,7 +557,7 @@ const Home: NextPage = () => {
           </div>
           <div className="flex flex-col px-8 md:flex-row md:justify-between text-white p-3 mt-4 md:mt-0 md:px-24 pb-10">
             <div className="max-w-xs w-full md:w-2/4">
-              <p className="font-bold">Firm Name</p>
+              <p className="font-bold">FLYBROD</p>
               <p className="text-sm mt-2">
                 We can put our knowledge and experience to work for you from the
                 very start of your study abroad journey – from finding a
