@@ -495,7 +495,7 @@ const Home: NextPage = () => {
                 slidesPerView: 2,
               },
               992: {
-                slidesPerView: 3,
+                slidesPerView: 4,
               },
             }}
           >
@@ -504,12 +504,17 @@ const Home: NextPage = () => {
                 return (
                   <SwiperSlide key={index}>
                     <div className="max-w-sm bg-indigo-50 rounded-lg">
-                      <div className="shadow-lg p-4 flex flex-col justify-between leading-normal">
-                        <div className="flex items-center">
+                      <div className="shadow-lg p-2 flex flex-col justify-between leading-normal">
+                        <Image
+                          width={200}
+                          height={200}
+                          src="/home/testimonial.png"
+                        />
+                        {/* <div className="flex items-center">
                           <Image
                             width={40}
                             height={40}
-                            src="/home/study-abroad-student-1.png"
+                            src="/home/testimonial.png"
                             alt="Avatar of Jonathan Reinink"
                           />
                           <div className="text-sm ml-3">
@@ -527,7 +532,7 @@ const Home: NextPage = () => {
                           Dheeraj. I was very late to apply and deadline was
                           nearing for Jan admissions. Dheeraj quickly helped me
                           get a student visa for the UK in 10 days.
-                        </p>
+                        </p> */}
                       </div>
                     </div>
                   </SwiperSlide>
