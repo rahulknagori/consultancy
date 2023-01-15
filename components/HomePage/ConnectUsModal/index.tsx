@@ -140,6 +140,7 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
           </div>
           <div className="flex">
             <a
+              rel="noreferrer"
               target="_blank"
               href="https://instagram.com/fly_brod?igshid=YmMyMTA2M2Y="
               className="text-white hover:opacity-60 rounded-md"

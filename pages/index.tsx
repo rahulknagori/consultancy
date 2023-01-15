@@ -554,6 +554,7 @@ const Home: NextPage = () => {
             <div className="w-full md:w-2/4 flex mt-2 md:mt-0 md:justify-end">
               <div className="flex justify-end w-12 mr-0">
                 <a
+                  rel="noreferrer"
                   target="_blank"
                   href="https://instagram.com/fly_brod?igshid=YmMyMTA2M2Y="
                 >
