@@ -14,7 +14,6 @@ import {
   FaMoneyCheckAlt,
   FaGgCircle,
   FaCheckSquare,
-  FaTrophy,
 } from 'react-icons/fa'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -45,6 +44,11 @@ const Home: NextPage = () => {
           />
           <link rel="icon" href="/home/logo.png" />
         </Head>
+        <div style={{ position: 'fixed', bottom: 30, right: 50 }}>
+          <a href="https://wa.me/919110274844">
+            <Image width={40} height={40} src="/home/whatsapp-icon.png" />
+          </a>
+        </div>
         <div className="relative overflow-hidden bg-white">
           <div className="mx-auto max-w-7xl">
             <ToastContainer />
@@ -158,7 +162,7 @@ const Home: NextPage = () => {
           <h2 className="text-4xl text-center mt-1 font-bold tracking-tight text-gray-900 sm:text-5xl">
             Study abroad in 4 simple steps
           </h2>
-          <p className="text-center mt-3 italic">
+          <p className="text-center mt-3">
             Our team will guide you through every step of the study abroad
             process, from consultation to visa, at no cost.
           </p>
@@ -237,7 +241,7 @@ const Home: NextPage = () => {
           <h2 className="pt-5 text-4xl text-center mt-20 font-bold tracking-tight text-gray-900 sm:text-5xl">
             Destinations
           </h2>
-          <p className="sm:px-14 md:px-28 text-base text-center relative z-4 text-gray mt-4 italic">
+          <p className="sm:px-14 md:px-28 text-base text-center relative z-4 text-gray mt-4">
             Currently, we are assisting students to pursue their dream of
             studying abroad in these countries.
           </p>
@@ -313,10 +317,10 @@ const Home: NextPage = () => {
                   </h5>
                 </div>
                 <p className=" tracking-tight  ml-9 mt-1">
-                  We have a team of experienced education consultants from India
-                  with over 7 years of experience in guiding students through
-                  the study abroad process, providing you with a seamless and
-                  personalized experience.
+                  Our team of highly skilled education consultants from India
+                  boasts over 7 years of experience in assisting students
+                  through every step of the study abroad process, offering a
+                  tailored and effortless experience.
                 </p>
               </div>
               <div className="max-w-md mt-5">
@@ -548,10 +552,14 @@ const Home: NextPage = () => {
               Get Connected with us on Social Networks
             </p>
             <div className="w-full md:w-2/4 flex mt-2 md:mt-0 md:justify-end">
-              <div className="flex justify-between w-24 mr-0">
-                <FaInstagram />
-                <FaFacebook />
-                <FaLinkedin />
+              <div className="flex justify-end w-12 mr-0">
+                <a
+                  target="_blank"
+                  href="https://instagram.com/fly_brod?igshid=YmMyMTA2M2Y="
+                >
+                  <FaInstagram />
+                </a>
+                {/* <FaFacebook /> */}
               </div>
             </div>
           </div>
@@ -565,7 +573,7 @@ const Home: NextPage = () => {
               </p>
             </div>
             <ul className="w-full md:w-2/4 flex mt-2 md:mt-0 md:items-end flex-col">
-              <li className="text-sm mb-2">Phone: +919945473262</li>
+              <li className="text-sm mb-2">Phone: +919110274844</li>
               <li className="text-sm mb-2">Email: info@flybrod.com</li>
             </ul>
           </div>
