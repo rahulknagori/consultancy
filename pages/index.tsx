@@ -42,7 +42,7 @@ const Home: NextPage = () => {
           <link rel="icon" href="/home/logo.png" />
         </Head>
         <div
-          className="z-20"
+          className={`z-20 ${styles["whatsapp-logo"]}`}
           style={{ position: "fixed", bottom: 30, right: 50 }}
         >
           <a href="https://wa.me/919110274844">

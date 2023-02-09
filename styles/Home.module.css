@@ -151,6 +151,11 @@
     width: 100%;
     flex-direction: column;
   }
+
+  .whatsapp-logo {
+    right: 14px !important;
+    bottom: 4px !important;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
