@@ -108,6 +108,44 @@
   margin-left: 0.5rem;
 }
 
+.slanted-div {
+  overflow: hidden;
+}
+
+.slanted-div:after {
+  content: "";
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 240px;
+  width: 30%;
+  height: 99.8%;
+  background: rgb(185 28 28);
+  -webkit-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: skew(-45deg);
+  -ms-transform: skew(-45deg);
+  transform: skew(-45deg);
+  z-index: 1;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .slanted-div:after {
+    left: 255px;
+  }
+
+  .success-div {
+    width: 75% !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .slanted-div:after {
+    width: 25%;
+  }
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

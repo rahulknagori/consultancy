@@ -19,6 +19,11 @@ a {
   box-sizing: border-box;
 }
 
+.swiper-pagination-home .swiper-pagination-bullets{
+  bottom: -2px !important;
+}
+
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

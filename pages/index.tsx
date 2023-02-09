@@ -1,32 +1,29 @@
-import type { NextPage } from 'next'
-import { useState } from 'react'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import { Navigation, Pagination, A11y, Autoplay, Scrollbar } from 'swiper'
-import { ToastContainer } from 'react-toastify'
+import type { NextPage } from "next";
+import { useState } from "react";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import { Navigation, Pagination, A11y, Autoplay, Scrollbar } from "swiper";
+import { ToastContainer } from "react-toastify";
 
 import {
-  FaFacebook,
   FaInstagram,
-  FaLinkedin,
   FaUserShield,
   FaMoneyCheckAlt,
-  FaGgCircle,
   FaCheckSquare,
-} from 'react-icons/fa'
+} from "react-icons/fa";
 
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import 'swiper/css/autoplay'
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
-import ConnectUsModal from '../components/HomePage/ConnectUsModal'
+import ConnectUsModal from "../components/HomePage/ConnectUsModal";
 
 const Home: NextPage = () => {
-  const [openModal, setOpenModal] = useState<boolean>(false)
+  const [openModal, setOpenModal] = useState<boolean>(false);
 
   return (
     <>
@@ -44,7 +41,10 @@ const Home: NextPage = () => {
           />
           <link rel="icon" href="/home/logo.png" />
         </Head>
-        <div style={{ position: 'fixed', bottom: 30, right: 50 }}>
+        <div
+          className="z-20"
+          style={{ position: "fixed", bottom: 30, right: 50 }}
+        >
           <a href="https://wa.me/919110274844">
             <Image width={40} height={40} src="/home/whatsapp-icon.png" />
           </a>
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
         <div className="relative overflow-hidden bg-white">
           <div className="mx-auto max-w-7xl">
             <ToastContainer />
-            <div className="relative z-10 bg-white pb-8 sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32">
+            <div className="relative z-10 bg-white pb-8 sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32 ">
               <svg
                 className="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block"
                 fill="currentColor"
@@ -311,6 +311,20 @@ const Home: NextPage = () => {
               </div>
               <div className="max-w-md mt-5">
                 <div className="flex items-center">
+                  <FaMoneyCheckAlt className="text-indigo-600" size={20} />
+                  <h5 className="text-gray font-bold tracking-tight ml-4">
+                    Show Money Assistance
+                  </h5>
+                </div>
+                <p className="tracking-tight ml-9 mt-1 ">
+                  Our show money assistance helps students alleviate financial
+                  stress and settle into their studies in the UK with ease. By
+                  covering expenses, students can fully immerse themselves in
+                  their education and reach their full potential.
+                </p>
+              </div>
+              <div className="max-w-md mt-5">
+                <div className="flex items-center">
                   <FaUserShield className="text-indigo-600" size={20} />
                   <h5 className="text-gray font-bold tracking-tight ml-4">
                     Expert Consultants
@@ -323,7 +337,7 @@ const Home: NextPage = () => {
                   tailored and effortless experience.
                 </p>
               </div>
-              <div className="max-w-md mt-5">
+              {/* <div className="max-w-md mt-5">
                 <div className="flex items-center">
                   <FaGgCircle className="text-indigo-600" size={20} />
                   <h5 className="text-gray font-bold tracking-tight ml-4">
@@ -336,7 +350,7 @@ const Home: NextPage = () => {
                   the visa application process, resulting in a high success
                   rate.
                 </p>
-              </div>
+              </div> */}
               <div className="max-w-md mt-5">
                 <div className="flex items-center">
                   <FaCheckSquare className="text-indigo-600" size={20} />
@@ -469,17 +483,31 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+
         {/* testimonials */}
         <h2 className="text-4xl text-center mt-14 font-bold tracking-tight text-gray-900 sm:text-5xl">
-          Testimonials
+          Student Stories
         </h2>
         <p className="sm:px-14 md:px-28 max-w-4xl m-auto text-base text-center relative z-4 text-gray mt-4">
           Our students have recently been accepted to universities in Canada,
           the UK and Ireland. What are you waiting for?
         </p>
-        <div className="flex justify-between mt-10">
+        <div className="flex justify-between mt-10 bg-indigo-50 relative">
+          <div className={` ${styles["slanted-div"]}`}></div>
+          <div
+            className={`h-100 md:w-7/12 lg:w-6/12 z-10 bg-red-700 p-5 hidden md:block ${styles["success-div"]}`}
+          >
+            <p className="text-white text-2xl text-center font-medium md:text-5xl mt-7">
+              Success
+            </p>
+            <p className="text-white text-center text-base md:text-4xl">
+              Stories
+            </p>
+          </div>
+
           <Swiper
             // install Swiper modules
+            className={"swiper-pagination-home"}
             modules={[Navigation, Pagination, A11y, Scrollbar, Autoplay]}
             spaceBetween={50}
             slidesPerView={3}
@@ -492,57 +520,42 @@ const Home: NextPage = () => {
               320: {
                 slidesPerView: 1,
               },
-              576: {
-                slidesPerView: 1,
+              480: {
+                slidesPerView: 1.5,
               },
-              768: {
+              576: {
                 slidesPerView: 2,
               },
+              768: {
+                slidesPerView: 2.2,
+              },
               992: {
-                slidesPerView: 4,
+                slidesPerView: 3,
               },
             }}
           >
-            {[...Array('Yathin', 'Dheeraj', 'Noor', 'Mishab', 'Rachana')].map(
-              (_item, index) => {
-                return (
-                  <SwiperSlide key={index}>
-                    <div className="max-w-sm bg-indigo-50 rounded-lg">
-                      <div className="shadow-lg p-2 flex flex-col justify-between leading-normal">
-                        <Image
-                          width={200}
-                          height={200}
-                          src="/home/testimonial.png"
-                        />
-                        {/* <div className="flex items-center">
-                          <Image
-                            width={40}
-                            height={40}
-                            src="/home/testimonial.png"
-                            alt="Avatar of Jonathan Reinink"
-                          />
-                          <div className="text-sm ml-3">
-                            <p className="text-gray-900 leading-none">
-                              {_item}
-                            </p>
-                            <p className="text-gray-600 mt-1">
-                              Studying in London
-                            </p>
-                          </div>
-                        </div>
-                        <p className="text-gray-700 text-base mt-2 max-h-32 overflow-auto">
-                          One of my friend recommended these guys when i was
-                          thinking of studying in the uk. I was assigned to
-                          Dheeraj. I was very late to apply and deadline was
-                          nearing for Jan admissions. Dheeraj quickly helped me
-                          get a student visa for the UK in 10 days.
-                        </p> */}
-                      </div>
+            {[
+              "testimonial-1.png",
+              "testimonial-2.png",
+              "testimonial-3.png",
+              "testimonial-4.png",
+              "testimonial-5.png",
+            ].map((_item, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <div className="max-w-sm rounded-lg p-5 md:p-7">
+                    <div className="shadow-lg flex flex-col justify-between leading-normal">
+                      <Image
+                        src={`/home/${_item}`}
+                        width={220}
+                        className="rounded"
+                        height={200}
+                      />
                     </div>
-                  </SwiperSlide>
-                )
-              },
-            )}
+                  </div>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
         {/* footer */}
@@ -551,7 +564,7 @@ const Home: NextPage = () => {
             <p className="text-sm w-full md:w-2/4 font-medium">
               Get Connected with us on Social Networks
             </p>
-            <div className="w-full md:w-2/4 flex mt-2 md:mt-0 md:justify-end">
+            <div className="w-full md:w-2/4 flex mt-2 md:mt-0 justify-end">
               <div className="flex justify-end w-12 mr-0">
                 <a
                   rel="noreferrer"
@@ -581,7 +594,7 @@ const Home: NextPage = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
