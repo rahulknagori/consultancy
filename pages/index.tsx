@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { Navigation, Pagination, A11y, Autoplay, Scrollbar } from "swiper";
 import { ToastContainer } from "react-toastify";
@@ -79,26 +80,27 @@ const Home: NextPage = () => {
                   >
                     <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
                       <div className="flex w-full items-center justify-between md:w-auto">
-                        <a aria-label="image - Logo" href="#">
-                          <span className="sr-only">FlyBrod</span>
-                          <Image
-                            width={64}
-                            height={45}
-                            alt="Abroad Education Consultants"
-                            className="w-auto"
-                            src="/home/logo.png"
-                          />
-                        </a>
+                        <Link aria-label="image - Logo" href="/">
+                          <a aria-label="image - Logo">
+                            <Image
+                              width={64}
+                              height={45}
+                              alt="Abroad Education Consultants"
+                              className="w-auto"
+                              src="/home/logo.png"
+                            ></Image>
+                          </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
-                      <a
+                      <Link
                         aria-label="FlyBrod"
-                        href="#"
+                        href="/"
                         className="font-medium text-gray-500 hover:text-gray-900"
                       >
                         FlyBrod
-                      </a>
+                      </Link>
                     </div>
                   </nav>
                 </div>
