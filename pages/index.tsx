@@ -136,26 +136,32 @@ const Home: NextPage = () => {
                       </a>
                     </div>
                   </div>
-                  <div className="w-100 grid grid-cols-1 mt-5 md:grid-cols-3">
-                    <div className="flex bg-emerald-600 items-center p-1">
-                      <Image
-                        alt="OISC certified consultants"
-                        width={28}
-                        height={28}
-                        src="/home/OISC-logo.webp"
-                      ></Image>
-                      <div className="font-bold text-white ml-1">CERTIFIED</div>
-                    </div>
-                    <div className="bg-red-700	flex items-center p-1">
-                      <div className="w-20 bg-red p-1">
+                  <div className="mt-6 sm:flex sm:justify-center lg:justify-start">
+                    <div className="grid grid-cols-1 md:grid-cols-2 flex justify-center">
+                      <div className="flex bg-emerald-600 items-center p-1">
                         <Image
-                          alt="British Council certified consultants"
-                          width={96}
+                          alt="OISC certified consultants"
+                          width={28}
                           height={28}
-                          src="/home/britishcouncillogo.webp"
+                          src="/home/OISC-logo.webp"
                         ></Image>
+                        <div className="font-bold text-white ml-1">
+                          CERTIFIED
+                        </div>
                       </div>
-                      <div className="font-bold text-white ml-2">CERTIFIED</div>
+                      <div className="bg-red-700	flex items-center p-1">
+                        <div className="w-20 bg-red p-1">
+                          <Image
+                            alt="British Council certified consultants"
+                            width={96}
+                            height={28}
+                            src="/home/britishcouncillogo.webp"
+                          ></Image>
+                        </div>
+                        <div className="font-bold text-white ml-2">
+                          CERTIFIED
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

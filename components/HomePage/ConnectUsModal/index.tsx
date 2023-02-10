@@ -225,7 +225,7 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
                       </a>
                       <a
                         onClick={() => {
-                          setDropdownValue("Australia");
+                          setDropdownValue("Ireland");
                           setOpenDestDropdown(false);
                         }}
                         href="#"
