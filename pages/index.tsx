@@ -28,25 +28,33 @@ const Home: NextPage = () => {
   return (
     <>
       <ConnectUsModal open={openModal} setOpenModal={setOpenModal} />
+      <Head>
+        <title>FlyBrod | Study Abroad Consultants</title>
+        <meta
+          name="description"
+          content="Looking for professional overseas education consultants? We provide expert guidance and support to students and families looking to study abroad. From finding the right program to navigating the application process, we're here to help every step of the way."
+        />
+        <meta
+          name="keywords"
+          content="study abroad, study abroad consultants Uk, study abroad consultants near me, consultants, UK, education, overseas study, study abroad programs,  study abroad agency, study abroad consultants, international education, study abroad advisors"
+        />
+        <link rel="icon" href="/home/logo.png" />
+      </Head>
       <div className={`${styles.container} mx-auto max-w-7xl`}>
-        <Head>
-          <title>FlyBrod | Study Abroad Consultants</title>
-          <meta
-            name="description"
-            content="Looking for professional overseas education consultants? We provide expert guidance and support to students and families looking to study abroad. From finding the right program to navigating the application process, we're here to help every step of the way."
-          />
-          <meta
-            name="keywords"
-            content="study abroad, study abroad consultants Uk, study abroad consultants near me, consultants, UK, education, overseas study, study abroad programs,  study abroad agency, study abroad consultants, international education, study abroad advisors"
-          />
-          <link rel="icon" href="/home/logo.png" />
-        </Head>
         <div
           className={`z-20 ${styles["whatsapp-logo"]}`}
           style={{ position: "fixed", bottom: 30, right: 50 }}
         >
-          <a href="https://wa.me/919110274844">
-            <Image width={40} height={40} src="/home/whatsapp-icon.png" />
+          <a
+            aria-label="contact us on whatsapp"
+            href="https://wa.me/917411494678"
+          >
+            <Image
+              alt="contact us on whatsapp"
+              width={40}
+              height={40}
+              src="/home/whatsapp-icon.png"
+            />
           </a>
         </div>
         <div className="relative overflow-hidden bg-white">
@@ -71,7 +79,7 @@ const Home: NextPage = () => {
                   >
                     <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
                       <div className="flex w-full items-center justify-between md:w-auto">
-                        <a href="#">
+                        <a aria-label="image - Logo" href="#">
                           <span className="sr-only">FlyBrod</span>
                           <Image
                             width={64}
@@ -85,6 +93,7 @@ const Home: NextPage = () => {
                     </div>
                     <div className="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
                       <a
+                        aria-label="FlyBrod"
                         href="#"
                         className="font-medium text-gray-500 hover:text-gray-900"
                       >
@@ -117,6 +126,7 @@ const Home: NextPage = () => {
                       className="rounded-md shadow"
                     >
                       <a
+                        aria-label="Talk to an Expert"
                         href="#"
                         className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-3 md:px-10 md:text-lg"
                       >
@@ -127,6 +137,7 @@ const Home: NextPage = () => {
                   <div className="w-100 grid grid-cols-1 mt-5 md:grid-cols-3">
                     <div className="flex bg-emerald-600 items-center p-1">
                       <Image
+                        alt="OISC certified consultants"
                         width={28}
                         height={28}
                         src="/home/OISC-logo.webp"
@@ -135,10 +146,12 @@ const Home: NextPage = () => {
                     </div>
                     <div className="bg-red-700	flex items-center p-1">
                       <div className="w-20 bg-red p-1">
-                        <img
-                          className="w-100"
+                        <Image
+                          alt="British Council certified consultants"
+                          width={96}
+                          height={28}
                           src="/home/britishcouncillogo.webp"
-                        ></img>
+                        ></Image>
                       </div>
                       <div className="font-bold text-white ml-2">CERTIFIED</div>
                     </div>
@@ -298,9 +311,9 @@ const Home: NextPage = () => {
               <div className="max-w-md">
                 <div className="flex items-center">
                   <FaMoneyCheckAlt className="text-indigo-600" size={20} />
-                  <h5 className="text-gray font-bold tracking-tight ml-4">
+                  <h3 className="text-gray font-bold tracking-tight ml-4">
                     Free Study Abroad Services
-                  </h5>
+                  </h3>
                 </div>
                 <p className="tracking-tight ml-9 mt-1 ">
                   We offer a range of study abroad services completely free of
@@ -312,9 +325,9 @@ const Home: NextPage = () => {
               <div className="max-w-md mt-5">
                 <div className="flex items-center">
                   <FaMoneyCheckAlt className="text-indigo-600" size={20} />
-                  <h5 className="text-gray font-bold tracking-tight ml-4">
+                  <h3 className="text-gray font-bold tracking-tight ml-4">
                     Show Money Assistance
-                  </h5>
+                  </h3>
                 </div>
                 <p className="tracking-tight ml-9 mt-1 ">
                   Our show money assistance helps students alleviate financial
@@ -326,9 +339,9 @@ const Home: NextPage = () => {
               <div className="max-w-md mt-5">
                 <div className="flex items-center">
                   <FaUserShield className="text-indigo-600" size={20} />
-                  <h5 className="text-gray font-bold tracking-tight ml-4">
+                  <h3 className="text-gray font-bold tracking-tight ml-4">
                     Expert Consultants
-                  </h5>
+                  </h3>
                 </div>
                 <p className=" tracking-tight  ml-9 mt-1">
                   Our team of highly skilled education consultants from India
@@ -354,9 +367,9 @@ const Home: NextPage = () => {
               <div className="max-w-md mt-5">
                 <div className="flex items-center">
                   <FaCheckSquare className="text-indigo-600" size={20} />
-                  <h5 className="text-gray font-bold tracking-tight ml-4">
+                  <h3 className="text-gray font-bold tracking-tight ml-4">
                     High Visa Success Rate
-                  </h5>
+                  </h3>
                 </div>
                 <p className="tracking-tight ml-9 mt-1">
                   We conduct a thorough assessment of each student's profile to
@@ -388,7 +401,7 @@ const Home: NextPage = () => {
                 width={110}
                 height={110}
                 className="m-auto rounded-full"
-                alt="UWS Scotland"
+                alt="University of the West of Scotland"
                 src="/home/uws-scotland.jpeg"
               ></Image>
               <h3 className="text-center font-bold mt-3 ">
@@ -400,7 +413,7 @@ const Home: NextPage = () => {
                 width={110}
                 height={110}
                 className="m-auto rounded-full"
-                alt="York st john"
+                alt="York St John University"
                 src="/home/york-st-john.jpeg"
               ></Image>
               <h3 className="text-center font-bold mt-3 ">
@@ -424,7 +437,7 @@ const Home: NextPage = () => {
                 width={110}
                 height={110}
                 className="m-auto rounded-full"
-                alt="University of east london"
+                alt="University of Glasgow"
                 src="/home/University-of-glasgow.jpeg"
               ></Image>
               <h3 className="text-center font-bold mt-3 ">
@@ -438,7 +451,7 @@ const Home: NextPage = () => {
                 width={110}
                 height={110}
                 className="m-auto rounded-full"
-                alt="UWS Scotland"
+                alt="Regent's university London"
                 src="/home/Regent's-university-london.jpeg"
               ></Image>
               <h3 className="text-center font-bold mt-3 ">
@@ -450,7 +463,7 @@ const Home: NextPage = () => {
                 width={110}
                 height={110}
                 className="m-auto rounded-full"
-                alt="York st john"
+                alt="University-of-Greenwich"
                 src="/home/University-of-Greenwich.jpeg"
               ></Image>
               <h3 className="text-center font-bold mt-3 ">
@@ -462,7 +475,7 @@ const Home: NextPage = () => {
                 width={110}
                 height={110}
                 className="m-auto rounded-full"
-                alt="University of east london"
+                alt="Imperial College London"
                 src="/home/Imperial-College-London.jpeg"
               ></Image>
               <h3 className="text-center font-bold mt-3 ">
@@ -474,7 +487,7 @@ const Home: NextPage = () => {
                 width={110}
                 height={110}
                 className="m-auto rounded-full"
-                alt="University of east london"
+                alt="Northumbria University London"
                 src="/home/Northumbria-University-London.jpeg"
               ></Image>
               <h3 className="text-center font-bold mt-3 ">
@@ -546,6 +559,7 @@ const Home: NextPage = () => {
                   <div className="max-w-sm rounded-lg p-5 md:p-7">
                     <div className="shadow-lg flex flex-col justify-between leading-normal">
                       <Image
+                        alt={_item}
                         src={`/home/${_item}`}
                         width={220}
                         className="rounded"
@@ -567,13 +581,13 @@ const Home: NextPage = () => {
             <div className="w-full md:w-2/4 flex mt-2 md:mt-0 justify-end">
               <div className="flex justify-end w-12 mr-0">
                 <a
+                  aria-label="Go to instagram"
                   rel="noreferrer"
                   target="_blank"
                   href="https://instagram.com/fly_brod?igshid=YmMyMTA2M2Y="
                 >
                   <FaInstagram />
                 </a>
-                {/* <FaFacebook /> */}
               </div>
             </div>
           </div>
@@ -587,7 +601,7 @@ const Home: NextPage = () => {
               </p>
             </div>
             <ul className="w-full md:w-2/4 flex mt-2 md:mt-0 md:items-end flex-col">
-              <li className="text-sm mb-2">Phone: +919110274844</li>
+              <li className="text-sm mb-2">Phone: +917411494678</li>
               <li className="text-sm mb-2">Email: info@flybrod.com</li>
             </ul>
           </div>

@@ -19,10 +19,14 @@ a {
   box-sizing: border-box;
 }
 
-.swiper-pagination-home .swiper-pagination-bullets{
+.swiper-pagination-home .swiper-pagination-bullets {
   bottom: -2px !important;
 }
 
+.swiper-pagination-home .swiper-pagination-bullet {
+  padding: 6px;
+  margin-right: 2rem !important;
+}
 
 @media (prefers-color-scheme: dark) {
   html {

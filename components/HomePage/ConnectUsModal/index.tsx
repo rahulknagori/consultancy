@@ -1,37 +1,31 @@
-import React from 'react'
-import { useForm, SubmitHandler, Controller } from 'react-hook-form'
-import emailjs from '@emailjs/browser'
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaWhatsapp,
-  FaWindowClose,
-} from 'react-icons/fa'
-import { toast } from 'react-toastify'
+import React from "react";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import { FaInstagram, FaWhatsapp, FaWindowClose } from "react-icons/fa";
+import { toast } from "react-toastify";
 
-import Modal from '../../Modal'
-import Button from '../../UI/Button'
-import CircularLoader from '../../Loaders/CircularLoader'
+import Modal from "../../Modal";
+import Button from "../../UI/Button";
+import CircularLoader from "../../Loaders/CircularLoader";
 
 //toast css
-import 'react-toastify/dist/ReactToastify.css'
+import "react-toastify/dist/ReactToastify.css";
 
 type ModalProps = {
-  open: Boolean
-  setOpenModal: React.Dispatch<React.SetStateAction<boolean>>
-}
+  open: Boolean;
+  setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
 type FormValues = {
-  name: string
-  phoneEmail: string
-}
+  name: string;
+  phoneEmail: string;
+};
 
 const sx = {
-  width: '80%',
-  maxWidth: '40rem',
-  padding: '2rem',
-}
+  width: "80%",
+  maxWidth: "40rem",
+  padding: "2rem",
+};
 
 const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
   const {
@@ -40,77 +34,78 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
     control,
     reset,
     formState: { errors },
-  } = useForm<FormValues>()
+  } = useForm<FormValues>();
 
-  const [openDestDropdown, setOpenDestDropdown] = React.useState<boolean>(false)
+  const [openDestDropdown, setOpenDestDropdown] =
+    React.useState<boolean>(false);
 
-  const [dropdownValue, setDropdownValue] = React.useState<string>('Select')
-  const [loading, setLoading] = React.useState<boolean>(false)
+  const [dropdownValue, setDropdownValue] = React.useState<string>("Select");
+  const [loading, setLoading] = React.useState<boolean>(false);
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    setLoading(true)
+    setLoading(true);
     const templateParams = {
       ...data,
       destination: dropdownValue,
-    }
+    };
 
     try {
       emailjs
         .send(
-          'service_xwtolqy',
-          'template_gf3hzip',
+          "service_xwtolqy",
+          "template_gf3hzip",
           templateParams,
-          'F9KwgK-VvF1rk4y2O',
+          "F9KwgK-VvF1rk4y2O"
         )
         .then(
           (response) => {
             if (response.status === 200) {
-              reset()
-              setLoading(false)
-              toast('Details Submitted Successfully', {
-                position: 'top-right',
+              reset();
+              setLoading(false);
+              toast("Details Submitted Successfully", {
+                position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
-                type: 'success',
+                type: "success",
                 closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                theme: 'light',
-              })
-              setOpenModal(false)
+                theme: "light",
+              });
+              setOpenModal(false);
             }
           },
           (err) => {
-            toast('Something Went Wrong. Please Try again', {
-              position: 'top-right',
+            toast("Something Went Wrong. Please Try again", {
+              position: "top-right",
               autoClose: 5000,
               hideProgressBar: false,
-              type: 'error',
+              type: "error",
               closeOnClick: true,
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-              theme: 'light',
-            })
-            setLoading(false)
-          },
-        )
+              theme: "light",
+            });
+            setLoading(false);
+          }
+        );
     } catch (err) {
-      toast('Something Went Wrong. Please Try again', {
-        position: 'top-right',
+      toast("Something Went Wrong. Please Try again", {
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
-        type: 'error',
+        type: "error",
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: 'light',
-      })
-      setLoading(false)
+        theme: "light",
+      });
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <Modal sx={sx} open={open} setOpenModal={setOpenModal}>
@@ -120,11 +115,11 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
           className="text-slate-400 text-2xl float-right hover:opacity-80 cursor-pointer"
         />
         <p className="text-base text-gray-500">
-          Call us for any query:{' '}
-          <a href="tel:+919110274844">
+          Call us for any query:{" "}
+          <a href="tel:+917411494678">
             <span className="text-blue-600 italic underline font-medium">
-              +919110274844
-            </span>{' '}
+              +917411494678
+            </span>{" "}
           </a>
         </p>
       </div>
@@ -132,7 +127,7 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
         <div className="w-full flex justify-between">
           <div className="flex">
             <a
-              href="https://wa.me/919110274844"
+              href="https://wa.me/917411494678"
               className="p-1 mr-2 text-white bg-green-500 hover:opacity-60 rounded-md"
             >
               <FaWhatsapp />
@@ -145,23 +140,11 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
               href="https://instagram.com/fly_brod?igshid=YmMyMTA2M2Y="
               className="text-white hover:opacity-60 rounded-md"
               style={{
-                color: '#d62976',
+                color: "#d62976",
               }}
             >
               <FaInstagram size={20} />
             </a>
-            {/* <a
-              href="#"
-              className="p-2 mr-2 bg-sky-700 text-white hover:opacity-60 rounded-md"
-            >
-              <FaFacebook />
-            </a>
-            <a
-              href="#"
-              className="p-2 bg-sky-700 text-white hover:opacity-60 rounded-md"
-            >
-              <FaLinkedin />
-            </a> */}
           </div>
         </div>
         <hr className="my-4 h-px bg-gray-200 border-0 dark:bg-gray-700" />
@@ -178,8 +161,8 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
                 <input
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-2 px-4 mb-2 leading-tight focus:outline-none focus:bg-white capitalize"
                   id="grid-first-"
-                  {...register('name', {
-                    required: 'Name is required',
+                  {...register("name", {
+                    required: "Name is required",
                   })}
                   type="text"
                   placeholder="Enter your name"
@@ -229,8 +212,8 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
                     <div className="py-1" role="none">
                       <a
                         onClick={() => {
-                          setDropdownValue('UK')
-                          setOpenDestDropdown(false)
+                          setDropdownValue("UK");
+                          setOpenDestDropdown(false);
                         }}
                         href="#"
                         className="text-gray-700 block px-4 py-2 text-sm hover:bg-indigo-100"
@@ -242,8 +225,8 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
                       </a>
                       <a
                         onClick={() => {
-                          setDropdownValue('Australia')
-                          setOpenDestDropdown(false)
+                          setDropdownValue("Australia");
+                          setOpenDestDropdown(false);
                         }}
                         href="#"
                         className="text-gray-700 block px-4 py-2 text-sm hover:bg-indigo-100"
@@ -255,8 +238,8 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
                       </a>
                       <a
                         onClick={() => {
-                          setDropdownValue('Canada')
-                          setOpenDestDropdown(false)
+                          setDropdownValue("Canada");
+                          setOpenDestDropdown(false);
                         }}
                         href="#"
                         className="text-gray-700 block px-4 py-2 text-sm hover:bg-indigo-100"
@@ -289,7 +272,7 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
                   )}
                   name="phoneEmail"
                   control={control}
-                  rules={{ required: 'This is a required field' }}
+                  rules={{ required: "This is a required field" }}
                   defaultValue=""
                 />
 
@@ -313,7 +296,7 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
         </div>
       </div>
     </Modal>
-  )
-}
+  );
+};
 
-export default ConnectUsModal
+export default ConnectUsModal;
