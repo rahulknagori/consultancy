@@ -116,9 +116,9 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
         />
         <p className="text-base text-gray-500">
           Call us for any query:{" "}
-          <a href="tel:+917411494678">
+          <a href="tel:+919731105961">
             <span className="text-blue-600 italic underline font-medium">
-              +917411494678
+              +919731105961
             </span>{" "}
           </a>
         </p>
@@ -127,7 +127,7 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
         <div className="w-full flex justify-between">
           <div className="flex">
             <a
-              href="https://wa.me/917411494678"
+              href="https://wa.me/919731105961"
               className="p-1 mr-2 text-white bg-green-500 hover:opacity-60 rounded-md"
             >
               <FaWhatsapp />

@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         <title>FlyBrod | Study Abroad Consultants</title>
         <meta
           name="description"
-          content="Looking for professional overseas education consultants? We provide expert guidance and support to students and families looking to study abroad. From finding the right program to navigating the application process, we're here to help every step of the way."
+          content="Looking for professional overseas education consultants? We provide expert guidance and support to students looking to study abroad. From finding the right program to navigating the application process, we're here to help every step of the way."
         />
         <meta
           name="keywords"
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
         >
           <a
             aria-label="contact us on whatsapp"
-            href="https://wa.me/917411494678"
+            href="https://wa.me/919731105961"
           >
             <Image
               alt="contact us on whatsapp"
@@ -609,7 +609,7 @@ const Home: NextPage = () => {
               </p>
             </div>
             <ul className="w-full md:w-2/4 flex mt-2 md:mt-0 md:items-end flex-col">
-              <li className="text-sm mb-2">Phone: +917411494678</li>
+              <li className="text-sm mb-2">Phone: +919731105961</li>
               <li className="text-sm mb-2">Email: info@flybrod.com</li>
             </ul>
           </div>
