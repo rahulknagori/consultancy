@@ -137,7 +137,7 @@ const ConnectUsModal = ({ open, setOpenModal }: ModalProps): JSX.Element => {
             <a
               rel="noreferrer"
               target="_blank"
-              href="https://instagram.com/fly_brod?igshid=YmMyMTA2M2Y="
+              href="https://instagram.com/flybrod_"
               className="text-white hover:opacity-60 rounded-md"
               style={{
                 color: "#d62976",

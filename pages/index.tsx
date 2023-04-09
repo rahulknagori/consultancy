@@ -592,7 +592,7 @@ const Home: NextPage = () => {
                   aria-label="Go to instagram"
                   rel="noreferrer"
                   target="_blank"
-                  href="https://instagram.com/fly_brod?igshid=YmMyMTA2M2Y="
+                  href="https://instagram.com/flybrod_"
                 >
                   <FaInstagram />
                 </a>
